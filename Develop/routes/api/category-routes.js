@@ -14,9 +14,7 @@ router.get('/:id', async (req, res) => {
   // find one category by its `id` value
   // be sure to include its associated Products
   const category_id = req.params.id;
-
   const category = await Category.findByPk(category_id);
-  console.log
   res.send(category);
 
 });
@@ -39,6 +37,7 @@ router.put('/:id', async (req, res) => {
   category.update({
     category_name: categoryData.category_name
   });
+
 
 
 
